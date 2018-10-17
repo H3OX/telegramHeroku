@@ -67,7 +67,7 @@ request(url, (err, res, body) => {
 Timezone: ${d.timezone}
 ${weatherState}
 ${emoji.get(emojiArray[10])}Temperature: ${d.currently.temperature} °C
-${emoji.get(emojiArray[11])}Humidity: ${d.currently.humidity * 100} %
+${emoji.get(emojiArray[11])}Humidity: ${Math.round(d.currently.humidity * 100)} %
 ${emoji.get(emojiArray[12])}Pressure: ${d.currently.pressure} PSI
 ${emoji.get(emojiArray[1])}Cloud cover: ${d.currently.cloudCover * 100} %
 ${emoji.get(emojiArray[0])}UV index: ${d.currently.uvIndex} UVI

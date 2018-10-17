@@ -1,4 +1,5 @@
 const Telegraf = require('telegraf') //Telegraf API
+const app = require('express')()
 const request = require('request') //Request API
 const emoji = require('node-emoji') //Emoji usage
 const token = '561442379:AAEvgdqOeUkybVNa199Q1XJSoh-I2IXR2Xs' //Telegram API token
@@ -7,7 +8,12 @@ const coordx = 55.753960 //Moscow x coordinates
 const coordy = 37.620393 //Moscow y coordinates
 const apikey = '7da57778334a1b3fe7e5990a67e0d167' //DarkSky API key
 const url = `https://api.darksky.net/forecast/${apikey}/${coordx},${coordy}?units=ca`
-console.log(url)
+
+var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
+app.listen(server_port, server_host, function() {
+    console.log('Listening on port %d', server_port);
+});
 
 //Array of emojis
 let emojiArray = ['sunny', 'cloud', 'new_moon', 'rain_cloud', 'snowflake', 'snow_cloud', 'dash',

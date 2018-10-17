@@ -9,6 +9,13 @@ const coordy = 37.620393 //Moscow y coordinates
 const apikey = '7da57778334a1b3fe7e5990a67e0d167' //DarkSky API key
 const url = `https://api.darksky.net/forecast/${apikey}/${coordx},${coordy}?units=ca`
 
+var reqTimer = setTimeout(function wakeUp() {
+   request("https://telegramweatherbotneox.herokuapp.com/", function() {
+      console.log("WAKE UP DYNO");
+   });
+   return reqTimer = setTimeout(wakeUp, 1200000);
+}, 1200000);
+
 var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
 app.listen(server_port, server_host, function() {

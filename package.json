@@ -1,0 +1,19 @@
+{
+  "name": "TeleBot",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "babel logic --presets=env"
+  },
+  "engines": {
+    "node": "8.11.4"
+  },
+  "dependencies": {
+    "express": "4.16.4",
+    "telegraf": "3.24.1",
+    "requirejs": "2.3.6",
+    "request": "2.88.0",
+    "node-emoji": "1.8.1",
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0"
+  }
+}

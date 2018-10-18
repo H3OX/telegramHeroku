@@ -13,8 +13,8 @@ var reqTimer = setTimeout(function wakeUp() {
    request("https://telegramweatherbotneox.herokuapp.com/", function() {
       console.log("WAKE UP DYNO");
    });
-   return reqTimer = setTimeout(wakeUp, 1200000);
-}, 1200000);
+   return reqTimer = setTimeout(wakeUp, 2000000);
+}, 2000000);
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
